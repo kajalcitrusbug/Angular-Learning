@@ -11,6 +11,8 @@ export class AppComponent {
   displayFirstName="";
   displayLastName="";
   count=0;
+  userName='Kajal jansari';
+  userNameDisabled=true
   getValue(){
     return 'get function data'
   };
@@ -29,4 +31,5 @@ export class AppComponent {
   counter(type:any){
     type === 'add'?this.count++:this.count--
   }
+  
 }

@@ -1,0 +1,9 @@
+<p style="color: blueviolet">{{ title }}</p>
+<div [ngSwitch]="color">
+  <h3 *ngSwitchCase="'red'" style="color: red">Red color</h3>
+  <h3 *ngSwitchCase="'green'" style="color: green">Green color</h3>
+  <h3 *ngSwitchCase="'blue'" style="color: blue">Blue color</h3>
+  <h3 *ngSwitchCase="'yellow'" style="color: yellow">Yellow color</h3>
+  <h3 *ngSwitchCase="'pink'" style="color: pink">Pink color</h3>
+  <h1 *ngSwitchDefault>Default color</h1>
+</div>

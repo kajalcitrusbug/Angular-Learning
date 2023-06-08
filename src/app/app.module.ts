@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {UserAuthModule} from './user-auth/user-auth.module'
+import { FormsModule } from '@angular/forms';
+import { UserAuthModule } from './user-auth/user-auth.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -9,6 +10,15 @@ import { UserListComponent } from './user-list/user-list.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { CountryListComponent } from './country-list/country-list.component';
+import { IfelseExampleComponent } from './ifelse-example/ifelse-example.component';
+import { MultipleconditionExampleComponent } from './multiplecondition-example/multiplecondition-example.component';
+import { SwitchcaseExampleComponent } from './switchcase-example/switchcase-example.component';
+import { LoopExampleComponent } from './loop-example/loop-example.component';
+import { StyleBindingExampleComponent } from './style-binding-example/style-binding-example.component';
+import { HeaderComponent } from './header/header.component';
+import { BasicFormExampleComponent } from './basic-form-example/basic-form-example.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TodoListExampleComponent } from './todo-list-example/todo-list-example.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +28,18 @@ import { CountryListComponent } from './country-list/country-list.component';
     UserListComponent,
     PersonListComponent,
     StudentListComponent,
-    CountryListComponent
+    CountryListComponent,
+    IfelseExampleComponent,
+    MultipleconditionExampleComponent,
+    SwitchcaseExampleComponent,
+    LoopExampleComponent,
+    StyleBindingExampleComponent,
+    HeaderComponent,
+    BasicFormExampleComponent,
+    TodoListExampleComponent,
   ],
-  imports: [
-    BrowserModule,
-    UserAuthModule
-  ],
+  imports: [BrowserModule, FormsModule, UserAuthModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,10 @@
+<p style="color: blueviolet">{{ title }}</p>
+<button (click)="ChangeShow()">Change If else Statement</button>
+<span *ngIf="show; then ifBlock; else elseBlock"></span>
+<!-- <span *ngIf="show ==='yes'; then ifBlock else elseBlock"></span> -->
+<ng-template #ifBlock
+  ><h3>Show If condition value -: {{ show }}</h3></ng-template
+>
+<ng-template #elseBlock
+  ><h3>Show else condition value -: {{ show }}</h3></ng-template
+>
