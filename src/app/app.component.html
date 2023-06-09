@@ -206,6 +206,34 @@
 </div>
 
 <div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Pass Data from parent to child Example</p>
+  <p>Update child to Parent value:- {{ parentData }}</p>
+  <app-child
+    [item]="childData"
+    (updateDataEvent)="updateChildToParent($event)"
+  ></app-child>
+  <button (click)="updateChild()">Update Child component</button>
+</div>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Two way binding Example</p>
+  <input type="text" [(ngModel)]="twoWayBindingName" />
+  <h3>{{ twoWayBindingName }}</h3>
+</div>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Student details (Reuseable component) Example</p>
+  <ul *ngFor="let student of studentDetails">
+    <app-student-details [item]="student"></app-student-details>
+  </ul>
+</div>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Pipes Example</p>
+  <app-pips-example></app-pips-example>
+</div>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Reactive Form Example</p>
+  <app-reactive-form-example></app-reactive-form-example>
+</div>
+<div style="border-style: solid; margin: 10px; padding: 10px">
   <!-- Use Module -->
   <app-signin></app-signin>
 </div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserAuthModule } from './user-auth/user-auth.module';
 
 import { AppComponent } from './app.component';
@@ -19,6 +19,12 @@ import { HeaderComponent } from './header/header.component';
 import { BasicFormExampleComponent } from './basic-form-example/basic-form-example.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TodoListExampleComponent } from './todo-list-example/todo-list-example.component';
+import { ChildComponent } from './child/child.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { TwoWayBindingExampleComponent } from './two-way-binding-example/two-way-binding-example.component';
+import { PipsExampleComponent } from './pips-example/pips-example.component';
+import { UsdInrPipe } from './pips-example/usd-inr.pipe';
+import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +43,20 @@ import { TodoListExampleComponent } from './todo-list-example/todo-list-example.
     HeaderComponent,
     BasicFormExampleComponent,
     TodoListExampleComponent,
+    ChildComponent,
+    StudentDetailsComponent,
+    TwoWayBindingExampleComponent,
+    PipsExampleComponent,
+    UsdInrPipe,
+    ReactiveFormExampleComponent,
   ],
-  imports: [BrowserModule, FormsModule, UserAuthModule, NgbModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    UserAuthModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
