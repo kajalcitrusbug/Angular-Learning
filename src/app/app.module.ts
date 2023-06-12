@@ -25,6 +25,7 @@ import { TwoWayBindingExampleComponent } from './two-way-binding-example/two-way
 import { PipsExampleComponent } from './pips-example/pips-example.component';
 import { UsdInrPipe } from './pips-example/usd-inr.pipe';
 import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
+import { RedElDirective } from './red-el.directive';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-f
     PipsExampleComponent,
     UsdInrPipe,
     ReactiveFormExampleComponent,
+    RedElDirective,
   ],
   imports: [
     BrowserModule,
