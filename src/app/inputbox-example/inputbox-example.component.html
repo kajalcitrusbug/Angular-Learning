@@ -1,0 +1,15 @@
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Input box example</p>
+  <input
+    type="text"
+    placeholder="Enter first Name"
+    name="first name"
+    #firstname
+    (input)="getFirstNameValue(firstname.value)"
+  />
+  <h4>Your First Name:{{ displayFirstName }}</h4>
+  <br />
+  <input type="text" placeholder="Enter last Name" name="Last Name" #lastname />
+  <button (click)="getLastNameValue(lastname.value)">Click</button>
+  <h4>Your last Name:{{ displayLastName }}</h4>
+</div>

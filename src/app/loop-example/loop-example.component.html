@@ -1,37 +1,39 @@
-<p style="color: blueviolet">{{ title }}</p>
-<p style="color: blueviolet">Simple Array example</p>
-<h3 *ngFor="let item of users">Name is:- {{ item }}</h3>
-<hr
-  style="
-    height: 3px;
-    border-width: 0;
-    color: black;
-    background-color: black;
-    text-align: left;
-    margin-left: 0;
-  "
-/>
-<p style="color: blueviolet">Array of object example</p>
-<h3 *ngFor="let item of useDetails">
-  {{ item.name }}----{{ item.email }}---{{ item.phone }}
-</h3>
-<hr
-  style="
-    height: 3px;
-    border-width: 0;
-    color: black;
-    background-color: black;
-    text-align: left;
-    margin-left: 0;
-  "
-/>
-<!-- Nested Loop  -->
-<p style="color: blueviolet">{{ titleNested }}</p>
-<ul *ngFor="let item of NestedUsers">
-  <li>Name: {{ item.name }}</li>
-  <li>Phone Number{{ item.phone }}</li>
-  <li>Social Account</li>
-  <ul *ngFor="let account of item.socialAccount">
-    <li>{{ account }}</li>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">{{ title }}</p>
+  <p style="color: blueviolet">Simple Array example</p>
+  <h3 *ngFor="let item of users">Name is:- {{ item }}</h3>
+  <hr
+    style="
+      height: 3px;
+      border-width: 0;
+      color: black;
+      background-color: black;
+      text-align: left;
+      margin-left: 0;
+    "
+  />
+  <p style="color: blueviolet">Array of object example</p>
+  <h3 *ngFor="let item of useDetails">
+    {{ item.name }}----{{ item.email }}---{{ item.phone }}
+  </h3>
+  <hr
+    style="
+      height: 3px;
+      border-width: 0;
+      color: black;
+      background-color: black;
+      text-align: left;
+      margin-left: 0;
+    "
+  />
+  <!-- Nested Loop  -->
+  <p style="color: blueviolet">{{ titleNested }}</p>
+  <ul *ngFor="let item of NestedUsers">
+    <li>Name: {{ item.name }}</li>
+    <li>Phone Number{{ item.phone }}</li>
+    <li>Social Account</li>
+    <ul *ngFor="let account of item.socialAccount">
+      <li>{{ account }}</li>
+    </ul>
   </ul>
-</ul>
+</div>

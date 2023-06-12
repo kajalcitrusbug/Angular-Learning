@@ -1,0 +1,44 @@
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <!-- call function and events-->
+  <p style="color: blueviolet">Event Example</p>
+  <button (click)="getName('kajal')">Click Me</button>
+  <br />
+  <br />
+  <br />
+  <button (click)="getData('hello')">Call Function</button>
+  <br />
+  <br />
+  <br />
+  <input
+    type="text"
+    placeholder="Event keyup"
+    #box
+    (keyup)="getData(box.value)"
+  />
+  <br />
+  <br />
+  <input
+    type="text"
+    placeholder="Event keydown"
+    #box1
+    (keydown)="getData(box1.value)"
+  />
+  <br />
+  <br />
+  <input
+    type="text"
+    placeholder="Event Blur"
+    #box2
+    (blur)="getData(box2.value)"
+  />
+  <br />
+  <br />
+  <input
+    type="text"
+    placeholder="Event Input"
+    #box3
+    (input)="getData(box3.value)"
+  />
+  <h4 (mouseover)="getData('over')">Test</h4>
+  <h4 (mouseleave)="getData('leave')">Test 1</h4>
+</div>

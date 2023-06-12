@@ -1,28 +1,31 @@
-<form [formGroup]="loginForm" (ngSubmit)="getLoginDetails()">
-  <input
-    type="text"
-    placeholder="Enter Username"
-    name="username"
-    formControlName="username"
-  />
-  <br />
-  <span
-    style="color: red"
-    *ngIf="username && username.invalid && username.touched"
-    >This field is not valid</span
-  >
-  <br />
-  <input
-    type="text"
-    placeholder="Enter Password"
-    name="password"
-    formControlName="password"
-  />
-  <br />
-  <span
-    style="color: red"
-    *ngIf="password && password.invalid && password.touched"
-    >This field is not valid</span
-  ><br />
-  <button [disabled]="loginForm.invalid">Login</button>
-</form>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Reactive Form Example</p>
+  <form [formGroup]="loginForm" (ngSubmit)="getLoginDetails()">
+    <input
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      formControlName="username"
+    />
+    <br />
+    <span
+      style="color: red"
+      *ngIf="username && username.invalid && username.touched"
+      >This field is not valid</span
+    >
+    <br />
+    <input
+      type="text"
+      placeholder="Enter Password"
+      name="password"
+      formControlName="password"
+    />
+    <br />
+    <span
+      style="color: red"
+      *ngIf="password && password.invalid && password.touched"
+      >This field is not valid</span
+    ><br />
+    <button [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>

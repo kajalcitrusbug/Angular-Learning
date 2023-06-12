@@ -26,6 +26,16 @@ import { PipsExampleComponent } from './pips-example/pips-example.component';
 import { UsdInrPipe } from './pips-example/usd-inr.pipe';
 import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
 import { RedElDirective } from './red-el.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { BootStrapExampleComponent } from './boot-strap-example/boot-strap-example.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildStudentDetailsComponent } from './student-details/child-student-details/child-student-details.component';
+import { DirectiveExampleComponent } from './directive-example/directive-example.component';
+import { BasicAngularExampleComponent } from './basic-angular-example/basic-angular-example.component';
+import { EventExampleComponent } from './event-example/event-example.component';
+import { InputboxExampleComponent } from './inputbox-example/inputbox-example.component';
+import { CounterExampleComponent } from './counter-example/counter-example.component';
+import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +61,15 @@ import { RedElDirective } from './red-el.directive';
     UsdInrPipe,
     ReactiveFormExampleComponent,
     RedElDirective,
+    BootStrapExampleComponent,
+    ParentComponent,
+    ChildStudentDetailsComponent,
+    DirectiveExampleComponent,
+    BasicAngularExampleComponent,
+    EventExampleComponent,
+    InputboxExampleComponent,
+    CounterExampleComponent,
+    PropertybindingComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +77,7 @@ import { RedElDirective } from './red-el.directive';
     UserAuthModule,
     NgbModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

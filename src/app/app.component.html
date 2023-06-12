@@ -1,245 +1,53 @@
-<!-- Header component -->
 <app-header></app-header>
-
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Basic of angular</p>
-  <h1>Hello Angular {{ title }}</h1>
-  <h1>{{ data }}</h1>
-  <h1 class="{{ title }}">{{ getValue() }}</h1>
-</div>
-<br />
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <!-- call function and events-->
-  <p style="color: blueviolet">Event Example</p>
-  <button (click)="getName('kajal')">Click Me</button>
-  <br />
-  <br />
-  <br />
-  <button (click)="getData('hello')">Call Function</button>
-  <br />
-  <br />
-  <br />
-  <input
-    type="text"
-    placeholder="Event keyup"
-    #box
-    (keyup)="getData(box.value)"
-  />
-  <br />
-  <br />
-  <input
-    type="text"
-    placeholder="Event keydown"
-    #box1
-    (keydown)="getData(box1.value)"
-  />
-  <br />
-  <br />
-  <input
-    type="text"
-    placeholder="Event Blur"
-    #box2
-    (blur)="getData(box2.value)"
-  />
-  <br />
-  <br />
-  <input
-    type="text"
-    placeholder="Event Input"
-    #box3
-    (input)="getData(box3.value)"
-  />
-  <h4 (mouseover)="getData('over')">Test</h4>
-  <h4 (mouseleave)="getData('leave')">Test 1</h4>
-</div>
-<br />
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Input box example</p>
-  <input
-    type="text"
-    placeholder="Enter first Name"
-    name="first namr"
-    #firstname
-    (input)="getFirstNameValue(firstname.value)"
-  />
-  <h4>Your First Name:{{ displayFirstName }}</h4>
-  <br />
-  <input type="text" placeholder="Enter last Name" name="Last Name" #lastname />
-  <button (click)="getLastNameValue(lastname.value)">Click</button>
-  <h4>Your last Name:{{ displayLastName }}</h4>
-</div>
-<br />
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <!-- Counter Example -->
-  <p style="color: blueviolet">Counter Example</p>
-  <button (click)="counter('minus')">--</button>
-  <button (click)="counter('add')">++</button>
-  <h3>{{ count }}</h3>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <!-- Property binding -->
-  <p style="color: blueviolet">Property binding Example</p>
-  <h1>Property binding</h1>
-  <input
-    type="text"
-    name="user-name"
-    value="{{ userName }}"
-    disabled="{{ userNameDisabled }}"
-  /><br /><br />
-  <input
-    type="text"
-    name="user-name"
-    [value]="userName"
-    [disabled]="userNameDisabled"
-  />
-</div>
-
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <!-- Use component -->
-  <p style="color: blueviolet">How to use and make component Example</p>
-  <app-login></app-login>
-  <app-register></app-register>
-  <app-user-list></app-user-list>
-  <app-person-list></app-person-list>
-  <app-student-list></app-student-list>
-  <app-country-list></app-country-list>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <app-ifelse-example></app-ifelse-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <app-multiplecondition-example></app-multiplecondition-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <app-switchcase-example></app-switchcase-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <app-loop-example></app-loop-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Style binding Example</p>
-  <app-style-binding-example></app-style-binding-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Basic Example</p>
-  <app-basic-form-example></app-basic-form-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">BootStrap Example</p>
-  <p>
-    <ngb-alert [dismissible]="false">
-      <strong>Warning!</strong> Better check yourself, you're not looking too
-      good.
-    </ngb-alert>
-  </p>
-  <div ngbAccordion>
-    <div ngbAccordionItem [collapsed]="false">
-      <h2 ngbAccordionHeader>
-        <button ngbAccordionButton>Simple</button>
-      </h2>
-      <div ngbAccordionCollapse>
-        <div ngbAccordionBody>
-          <ng-template>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-            single-origin coffee nulla assumenda shoreditch et. Nihil anim
-            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth
-            nesciunt you probably haven't heard of them accusamus labore
-            sustainable VHS.
-          </ng-template>
-        </div>
-      </div>
-    </div>
-    <div ngbAccordionItem>
-      <h2 ngbAccordionHeader>
-        <button ngbAccordionButton>
-          <span>&#9733; <b>Fancy</b> title &#9733;</span>
-        </button>
-      </h2>
-      <div ngbAccordionCollapse>
-        <div ngbAccordionBody>
-          <ng-template>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-            single-origin coffee nulla assumenda shoreditch et. Nihil anim
-            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth
-            nesciunt you probably haven't heard of them accusamus labore
-            sustainable VHS.
-          </ng-template>
-        </div>
-      </div>
-    </div>
-    <div ngbAccordionItem [disabled]="true">
-      <h2 ngbAccordionHeader>
-        <button ngbAccordionButton>Disabled</button>
-      </h2>
-      <div ngbAccordionCollapse>
-        <div ngbAccordionBody>
-          <ng-template>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-            single-origin coffee nulla assumenda shoreditch et. Nihil anim
-            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth
-            nesciunt you probably haven't heard of them accusamus labore
-            sustainable VHS.
-          </ng-template>
-        </div>
-      </div>
-    </div>
+<div
+  style="
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+  "
+>
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <a routerLink="/basic-angular">Basic Angular</a>
+    <a routerLink="/event-example">Event Example</a>
+    <a routerLink="/inputbox-example">Input box Example</a>
+    <a routerLink="/conuter-example">Counter Example</a>
+    <a routerLink="/property-binding-example">Property Binding Example</a>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+    <a routerLink="/user-list">User List</a>
+    <a routerLink="/person-list">Person List</a>
+    <a routerLink="/student-list">Student List</a>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <a routerLink="/country-list">Country List</a>
+    <a routerLink="/if-else-example">If else Example</a>
+    <a routerLink="/multiple-condition-example">Multiple condition Example</a>
+    <a routerLink="/switch-case-example">Switch case Example</a>
+    <a routerLink="/loop-example">Loop Example</a>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <a routerLink="/style-binding-example">Style binding Example</a>
+    <a routerLink="/basic-form-example">Basic Form Example</a>
+    <a routerLink="/bootStrap-example">BootStrap Example</a>
+    <a routerLink="/todo-list-example">Todo List Example</a>
+    <a routerLink="/child-parent-example">Child Parent Data pass Example</a>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column">
+    <a routerLink="/two-way-binding-example">Two way binding Example</a>
+    <a routerLink="/student-details-example">Student details Example</a>
+    <a routerLink="/pipes-example">Pipes Example</a>
+    <a routerLink="/reactive-form-example">Reactive Form Example</a>
+    <a routerLink="/directive-example">Directive Example</a>
   </div>
 </div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Todo List Example</p>
-  <app-todo-list-example></app-todo-list-example>
-</div>
-
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Pass Data from parent to child Example</p>
-  <p>Update child to Parent value:- {{ parentData }}</p>
-  <app-child
-    [item]="childData"
-    (updateDataEvent)="updateChildToParent($event)"
-  ></app-child>
-  <button (click)="updateChild()">Update Child component</button>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Two way binding Example</p>
-  <input type="text" [(ngModel)]="twoWayBindingName" />
-  <h3>{{ twoWayBindingName }}</h3>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Student details (Reuseable component) Example</p>
-  <ul *ngFor="let student of studentDetails">
-    <app-student-details [item]="student"></app-student-details>
-  </ul>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Pipes Example</p>
-  <app-pips-example></app-pips-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Reactive Form Example</p>
-  <app-reactive-form-example></app-reactive-form-example>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <p style="color: blueviolet">Directive Example</p>
-  <h1 appRedEl>{{ title }}</h1>
-  <p>Hello How are you ?</p>
-  <p appRedEl>I am kajal jansari</p>
-</div>
-<div style="border-style: solid; margin: 10px; padding: 10px">
-  <!-- Use Module -->
+<div style="flex: 1; display: flex; flex-direction: column"></div>
+<!-- <div style="border-style: solid; margin: 10px; padding: 10px">
+  Use Module
   <app-signin></app-signin>
-</div>
+</div> -->
+<router-outlet></router-outlet>

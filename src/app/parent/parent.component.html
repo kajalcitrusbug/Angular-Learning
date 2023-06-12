@@ -1,0 +1,9 @@
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Pass Data from parent to child Example</p>
+  <p>Update child to Parent value:- {{ parentData }}</p>
+  <app-child
+    [item]="childData"
+    (updateDataEvent)="updateChildToParent($event)"
+  ></app-child>
+  <button (click)="updateChild()">Update Child component</button>
+</div>

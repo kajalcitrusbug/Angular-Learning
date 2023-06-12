@@ -1,2 +1,6 @@
-<li>{{ item.name }}</li>
-<li>{{ item.email }}</li>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Student details (Reuseable component) Example</p>
+  <ul *ngFor="let student of studentDetails">
+    <app-child-student-details [item]="student"></app-child-student-details>
+  </ul>
+</div>

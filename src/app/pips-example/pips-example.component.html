@@ -1,11 +1,14 @@
-<p style="color: brown">Basic Pipes</p>
-<p>{{ title | uppercase }}</p>
+<div style="border-style: solid; margin: 10px; padding: 10px">
+  <p style="color: blueviolet">Pipes Example</p>
+  <p style="color: brown">Basic Pipes</p>
+  <p>{{ title | uppercase }}</p>
 
-<p style="color: brown">Advance Pipes</p>
-<p>{{ title | slice : 4 : 9 | uppercase }}</p>
-<p>{{ user | json | uppercase }}</p>
-<p>{{ 2000.3 | number : "2.2-3" }}</p>
-<p>{{ 20 | currency : "INR" }}</p>
+  <p style="color: brown">Advance Pipes</p>
+  <p>{{ title | slice : 4 : 9 | uppercase }}</p>
+  <p>{{ user | json | uppercase }}</p>
+  <p>{{ 2000.3 | number : "2.2-3" }}</p>
+  <p>{{ 20 | currency : "INR" }}</p>
 
-<p style="color: brown">Custom pipes</p>
-<p>{{ 20 | usdInr : 72 }}</p>
+  <p style="color: brown">Custom pipes</p>
+  <p>{{ 20 | usdInr : 72 }}</p>
+</div>
