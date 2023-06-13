@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { UserAuthModule } from './user-auth/user-auth.module';
 
 import { AppComponent } from './app.component';
@@ -36,6 +37,10 @@ import { EventExampleComponent } from './event-example/event-example.component';
 import { InputboxExampleComponent } from './inputbox-example/inputbox-example.component';
 import { CounterExampleComponent } from './counter-example/counter-example.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
+import { DynamicRoutingExampleComponent } from './dynamic-routing-example/dynamic-routing-example.component';
+import { NoPageFoundExampleComponent } from './no-page-found-example/no-page-found-example.component';
+import { FooterComponent } from './footer/footer.component';
+import { ModelAndInterfaceExampleComponent } from './model-and-interface-example/model-and-interface-example.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +75,10 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
     InputboxExampleComponent,
     CounterExampleComponent,
     PropertybindingComponent,
+    DynamicRoutingExampleComponent,
+    NoPageFoundExampleComponent,
+    FooterComponent,
+    ModelAndInterfaceExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +87,7 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
     NgbModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

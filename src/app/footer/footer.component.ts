@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { UserDataService } from '../services/user-data.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css'],
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css'],
 })
-export class UserListComponent {
+export class FooterComponent {
   users: any = [];
   constructor(private userData: UserDataService) {
     console.log('userData', userData.users());

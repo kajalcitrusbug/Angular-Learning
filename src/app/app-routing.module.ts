@@ -6,12 +6,14 @@ import { BootStrapExampleComponent } from './boot-strap-example/boot-strap-examp
 import { CounterExampleComponent } from './counter-example/counter-example.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { DirectiveExampleComponent } from './directive-example/directive-example.component';
+import { DynamicRoutingExampleComponent } from './dynamic-routing-example/dynamic-routing-example.component';
 import { EventExampleComponent } from './event-example/event-example.component';
 import { IfelseExampleComponent } from './ifelse-example/ifelse-example.component';
 import { InputboxExampleComponent } from './inputbox-example/inputbox-example.component';
 import { LoginComponent } from './login/login.component';
 import { LoopExampleComponent } from './loop-example/loop-example.component';
 import { MultipleconditionExampleComponent } from './multiplecondition-example/multiplecondition-example.component';
+import { NoPageFoundExampleComponent } from './no-page-found-example/no-page-found-example.component';
 import { ParentComponent } from './parent/parent.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { PipsExampleComponent } from './pips-example/pips-example.component';
@@ -55,6 +57,14 @@ const routes: Routes = [
   { path: 'pipes-example', component: PipsExampleComponent },
   { path: 'reactive-form-example', component: ReactiveFormExampleComponent },
   { path: 'directive-example', component: DirectiveExampleComponent },
+  {
+    path: 'dynamic-routing-example/:id',
+    component: DynamicRoutingExampleComponent,
+  },
+  {
+    path: '**',
+    component: NoPageFoundExampleComponent,
+  },
 ];
 
 @NgModule({
