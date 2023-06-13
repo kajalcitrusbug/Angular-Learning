@@ -62,9 +62,19 @@ const routes: Routes = [
     component: DynamicRoutingExampleComponent,
   },
   {
-    path: '**',
-    component: NoPageFoundExampleComponent,
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((mod) => mod.AdminModule),
   },
+  {
+    path: 'guest',
+    loadChildren: () =>
+      import('./guest/guest.module').then((mod) => mod.GuestModule),
+  },
+  // {
+  //   path: '**',
+  //   component: NoPageFoundExampleComponent,
+  // },
 ];
 
 @NgModule({

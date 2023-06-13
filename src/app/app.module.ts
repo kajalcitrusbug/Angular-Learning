@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserAuthModule } from './user-auth/user-auth.module';
+import { AdminModule } from './admin/admin.module';
+import { GuestModule } from './guest/guest.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -88,6 +90,8 @@ import { ModelAndInterfaceExampleComponent } from './model-and-interface-example
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    // AdminModule,
+    // GuestModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
